@@ -1,7 +1,7 @@
 class Blog < ApplicationRecord
 	attachment :image
 	validates :title, :category_id, :body, :image, presence: true
-	belongs_to :category, optional: true
+	belongs_to :category
 	is_impressionable counter_cache: true
 
 	def self.search(search)
