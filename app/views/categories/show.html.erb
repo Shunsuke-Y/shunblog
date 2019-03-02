@@ -1,0 +1,21 @@
+<%= render 'categories/list_top' %>
+
+			<section class="Blog clearfix">
+				<h2 class="blog-headline"><%= @category %></h2>
+
+				<div class="blog-line"></div>
+				<% @blog.each do |blog| %>
+				<div class="blog-box">
+					<div class="blog-img">
+						<span class="category"><%= link_to blog.category.name, category_path(blog.category_id), class: "category-link" %></span>
+						<%= attachment_image_tag blog, :image, class: "blog-image", format: 'jpeg' %>
+					</div>
+					<h2 class="blog-text"><%= blog.title %></h2>
+					<%= link_to "read more...", blog_path(blog), class: "blog-read-more" %>
+				</div>
+				<% end %>
+				<%= paginate @blog, class: "paginate" %>
+			</section>
+
+<%= render 'categories/list_bottom' %>
+

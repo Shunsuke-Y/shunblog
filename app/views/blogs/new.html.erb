@@ -1,0 +1,35 @@
+<div class="form-box">
+<h1>shunblog new posts</h1>
+
+<%= form_for(@blog) do |f| %>
+
+<% if @blog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @blog.errors.count %> error has occurred.</h2>
+      <ul>
+      <% @blog.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <h3 class="form-box-h3">title</h3>
+    <%= f.text_field :title, :size => "30", :style => "font-size: 15px;" %>
+
+    <h3 class="form-box-h3">category</h3>
+    <%= f.select :category_id, {'Programming' => 1, 'Investment' => 2, 'Self-help' => 3, 'Side-job' => 4 }, {}, { style: " font-size: 15px;"} %>
+
+    <h3 class="form-box-h3">image</h3>
+    <%= f.attachment_field :image %>
+
+    <h3 class="form-box-h3">body</h3>
+    <%= f.text_area :body, :size => "40x20", style: "font-size: 15px;" %>
+    <div></div>
+    <input type="submit" value="Post" class="button" onclick=' confirm("Are you sure?")'>
+
+<% end %>
+
+<%= link_to "Back", blogs_path, class: "back-link" %>
+
+</div>

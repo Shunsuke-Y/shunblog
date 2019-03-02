@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<title>shunblog</title>
+</head>
+
+<body>
+	<header>
+		<div class="header-top">
+			<a class="link-top" href="/blogs"><%= image_tag 'img/shunblog.png', class: 'shunblog'%></a>
+			    <p class="header-name">Written by Shunsuke Yanagiya</p>
+		</div>
+	</header>
+	<header class="response-header clearfix">
+		<a href="/blogs"><h1 class="blog-name">shunblog</h1></a>
+
+	</header>
+	<nav class="normal-nav">
+		<ul class="nav-list">
+			<li class="nav-list-item"><a class="icon-nav icon-top fas fa-book-open" href="/blogs"> All articles</a></li>
+			<li class="nav-list-item"><%= link_to ' Programming', category_path(1), class: "icon-nav fas fa-code" %> </li>
+			<li class="nav-list-item"><%= link_to ' Investment', category_path(2), class: "icon-nav fas fa-chart-line" %></li>
+			<li class="nav-list-item"><%= link_to ' Self-help', category_path(3), class: "icon-nav fas fa-running" %></li>
+			<li class="nav-list-item"><%= link_to ' Side-job', category_path(4), class: "icon-nav fas fa-dollar-sign" %></li>
+		</ul>
+	</nav>
+
+	<nav class="respond-nav">
+		<ul class="nav-list">
+			<li class="nav-list-item"><a class="icon-nav icon-top fas fa-book-open" href="/blogs"> All</a></li>
+			<li class="nav-list-item"><%= link_to ' Program', category_path(1), class: "icon-nav fas fa-code" %> </li>
+			<li class="nav-list-item"><%= link_to ' Invest', category_path(2), class: "icon-nav fas fa-chart-line" %></li>
+			<li class="nav-list-item"><%= link_to ' Self-help', category_path(3), class: "icon-nav fas fa-running" %></li>
+			<li class="nav-list-item"><%= link_to ' Side-job', category_path(4), class: "icon-nav fas fa-dollar-sign" %></li>
+		</ul>
+	</nav>
+
+	<section class="main-visual">
+		<div class="main-visual-contents">
+			<h1 class="main-visual-text">Thanks for coming!</h1>
+			<p class="main-visual-text-2">プログラミング、投資、マインドセット、副業などの<br>
+			良質なコンテンツをお届けいたします。</p>
+		</div>
+	</section>
+
+	<main class="main-media">
+		<div class="main-contents clearfix">

@@ -1,0 +1,85 @@
+<div class="side-bar">
+				<section class="profile-box">
+					<h2 class="profile-headline">Profile</h2>
+					<div class="profile-line"></div>
+					<div class="profile-img-box"></div>
+					<h3 class="profile-name">シュンスケ</h3>
+					<div class="name-line"></div>
+					<p class="profile-detail">sample-textsample-textsample-text<br>
+					sample-textsample-textsample-textsample-textsample-textsample-textsample-textsample-textsample-textsample-textsample-textsample-textsample-textsample-textsample-textsample-text</p>
+					<p class="profile-detail">sample-textsample-textsample-textsample-textsample-textsample-textsample-textsample-textsample-textsample-textsample-text</p>
+
+					<p class="profile-link-text"><a class="profile-link" href="/detailed_profile">Detailed profile...</a></p>
+				</section>
+
+				<div class="searching-box">
+					<%= form_tag(search_path, :method => 'get') do %>
+ 						 <%= text_field_tag :search, "", class: "searching-box-content", placeholder: "   searching..." %>
+  							<%= button_tag type: 'submit', :name => nil, class: "btn btn-primary" do %>
+  							<i class="fas fa-search"></i>
+  							<% end %>
+								<% end %>
+				</div>
+				<% blog = Blog.order('impressions_count DESC').take(3) %>
+
+				<section class="popular-box">
+					<h2 class="popular-headline">Popular</h2>
+					<div class="popular-line"></div>
+					<% blog.each do |blog| %>
+					<div class="popular-contents">
+						<div class="popular-img">
+							<span class="category"><%= link_to blog.category.name, category_path(blog.category_id), class: "category-link" %></span>
+							<%=link_to attachment_image_tag(blog, :image, class: "popular-img", format: 'jpeg'), blog_path(blog) %>
+						</div>
+						<p class="popular-text"><%= blog.title %></p>
+						<%= link_to "read more...", blog_path(blog), class: "blog-read-more" %>
+					</div>
+					<% end %>
+				</section>
+			</div>
+		</div>
+	</main>
+
+		<section class="main2 clearfix">
+			<div class="main2-box">
+				<h1 class="main2-text">Contact</h1>
+				<div class="Contact-line"></div>
+				<p class="Contact-text-1">↓お仕事のご依頼はこちらから↓</p>
+				<p class="Contact-text-2">Mail<a class="contact-link" href="mailto:@gmail.com"> google@gmail.com</a><br>
+					TELL<a class="contact-link" href="tel:090-0000-0000"> 090-0000-0000</a></p>
+			</div>
+			<div class="main2-box">
+				<h1 class="main2-text">My product</h1>
+				<div class="My-product-line"></div>
+				<p class="My-product-text1">
+					これまでに作ってきたWebサービスです。<br>
+					↓ご愛用いただければ幸いです(^ ^)↓
+				</p>
+				<p class="My-product-text2">
+					<a class="product-link" href="/blogs">>>product1</a><br>
+					<a class="product-link" href="/blogs">>>product2</a><br>
+					<a class="product-link" href="/blogs">>>product3</a>
+				</p>
+			</div>
+			<div class="main2-box">
+				<h1 class="main2-text">SNS</h1>
+				<div class="SNS-line"></div>
+				<p class="SNS-text-1">
+					毎日良質な情報を発信しています。<br>
+					↓気軽にフォローしてください＾＾↓
+				</p>
+					<a class="icon-main2-SNS fab fa-twitter-square" href="https://twitter.com/s_yngy" target="_blank" style="color: #359aff;"></a>
+					<a class="icon-main2-SNS fas fa-rss-square" href="/blogs" style="color: #9df934;"></a>
+					<a class="icon-main2-SNS fab fa-facebook-square" href="/blogs" style="color: #3670f7;"></a>
+			</div>
+		</section>
+	<footer>
+		<p class="footer-text">©︎-Shunsuke Yanagiya 2019 All Rights Reserved.<%=link_to ' path', new_user_session_path, class: "footer-link" %> and <%=link_to ' out.', destroy_user_session_path, method: :delete, class: "footer-link" %>
+			<% if user_signed_in? %>
+			<%= link_to "new", new_blog_path, class: "footer-link" %>
+			<% end %>
+		</p>
+	</footer>
+</body>
+
+</html>

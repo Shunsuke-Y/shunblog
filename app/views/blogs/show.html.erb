@@ -1,0 +1,21 @@
+<%= render 'blogs/list_top' %>
+
+			<section class="Blog show-blog">
+				<p class="created-text">作成日:<%= @blog.created_at.strftime('%Y/%m/%d') %></p>
+				<h1 class="blog-title"><%= @blog.title %></h1>
+				<%= link_to @blog.category.name, category_path(@blog.category_id), class: "icon-tag fas fa-tags" %>
+				<%= attachment_image_tag @blog, :image, class: "blog-show-img", format: 'jpeg' %>
+
+				<p class="blog-show-text"><%= @blog.body %></p>
+
+				<%= link_to @blog.category.name, category_path(@blog.category_id), class: "icon-tag fas fa-tags" %> /
+				<% if user_signed_in? %>
+
+				<%= link_to "Edit", edit_blog_path(@blog) %> / <%= link_to "Delete", blog_path(@blog), method: :delete, "data-confirm" => "Are you sure?" %> / 
+				<% end %>
+				<%= link_to 'All articles', blogs_path %>
+				<p class="PV-count">PV <%=  @blog.impressionist_count %></p>
+			</section>
+
+<%= render 'blogs/list_bottom' %>
+

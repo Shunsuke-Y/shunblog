@@ -1,0 +1,850 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
+ */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+	color: #337ab7;
+}
+
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.header-name, .main-visual-contents > p, .main-visual-contents > h1, .main2-text, .profile-headline, .profile-name, .popular-headline, .blog-headline{
+	font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+}
+
+#error_explanation{
+	color: red;
+}
+
+#login{
+	text-align: center;
+}
+
+.programming-show-line{
+	width: 190px;
+    height: 3px;
+    background-color: #ec715f;
+    margin: 0px auto 8px;
+}
+
+.searching-box{
+	position: relative;
+}
+
+.btn-primary{
+	position: absolute;
+	top: 40px;
+	right: 25px;
+	border: 0;
+	background-color: #f6f6f6;
+}
+
+#search{
+	font-size: 17px;
+}
+
+.PV-count{
+	color: #6f6f6f;
+	padding-top: 10px;
+}
+
+.created-text{
+	margin-top: 30px;
+	color: #6f6f6f;
+}
+
+
+.icon-nav:hover{
+	background-color: #6f6f6f;
+}
+
+
+/*header*/
+
+.header-top{
+	width: 100%;
+	height: 90px;
+}
+
+.respond-nav{
+	display: none;
+}
+
+
+.shunblog{
+	width: 220px;
+	height: 60px;
+	float: left;
+	margin: 15px 0 10px 140px;
+}
+
+.header-name{
+	font-size: 15px;
+	color: #6f6f6f;
+	display: inline-block;
+	padding: 47px 0 0 30px;
+}
+
+.response-header{
+	display: none;
+}
+
+/*nav*/
+
+.nav-list{
+	background-color: black;
+	width: 100%;
+	height: 60px;
+}
+
+.nav-list-item{
+	display: inline-block;
+	list-style: none;
+	margin: 0 45px;
+	line-height: 60px;
+	font-size: 20px;
+}
+
+.icon-nav{
+	display: inline-block;
+	font-size: 20px;
+	color: white;
+	margin-right: 5px;
+}
+
+.icon-top{
+	margin: 0 5px 0 180px;
+	color: white;
+	font-size: 19px;
+}
+
+
+
+.nav-list-item:first-child{
+	margin-left: 0px;
+}
+
+/*main-visual*/
+
+.main-visual{
+	background-image: url(img/main-visual.jpg);
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 300px;
+	text-align: center;
+}
+
+.main-visual-contents{
+	width: 100%;
+	height: 300px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.main-visual-text{
+	padding-top: 50px;
+	font-size: 40px;
+	color: white;
+}
+
+.main-visual-text-2{
+	padding-top: 20px;
+	font-size: 30px;
+	color: white;
+}
+
+/*main*/
+
+main{
+	background-color: #f7f7f7;
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+
+.main-contents{
+	width: 93%;
+	margin: 0 auto;
+}
+
+/*blog*/
+
+.Blog{
+	width: 69%;
+	float: left;
+	margin-top: 25px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+
+.blog-contents{
+	width: 770px;
+	margin: 0 auto;
+}
+
+.blog-headline{
+	text-align: center;
+	font-size: 30px;
+	margin-top: 10px;
+}
+
+.blog-headline{
+	text-align: center;
+	font-size: 25px;
+	margin-top: 10px;
+}
+
+.blog-line{
+	width: 155px;
+    height: 3px;
+    background-color: #ec715f;
+    margin: 0px auto 8px;
+}
+
+.blog-profile-line{
+	width: 220px;
+    height: 3px;
+    background-color: #ec715f;
+    margin: 0px auto 8px;
+}
+
+.blog-box {
+	width: 400px;
+	height: 400px;
+	float: left;
+	margin: 15px;
+	text-align: center;
+	background-color: white;
+}
+
+.blog-box:nth-child(odd){
+	margin-left: 35px;
+}
+
+.blog-box:nth-child(even){
+	margin-right: 0;
+}
+
+.blog-img{
+	height: 200px;
+	width: 100%;
+}
+
+.blog-image{
+	width: 100%;
+	height: 200px;
+}
+
+.blog-image:hover{
+	opacity: 0.8;
+}
+
+.blog-show-img{
+	width: 100%;
+	height: 450px;
+	margin-top: 30px;
+}
+
+.category{
+	display: block;
+	padding: 0 10px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 5px;
+	margin: 5px;
+	float: right;
+	background-color: #337ab7;
+	box-shadow: 0px 2px #175284;
+}
+
+.category:hover{
+	opacity: 0.8;
+}
+
+.category:active{
+	box-shadow: none;
+	position: relative;
+	top: 2px;
+}
+
+.category-link{
+	color: white;
+	text-align: center;
+}
+
+.blog-read-more{
+	margin-top: 20px;
+	display: inline-block;
+}
+
+.blog-read-more:hover{
+	background-color: #337ab7;
+	color: white;
+}
+
+.blog-text{
+	color: #6f6f6f;
+	padding-top: 70px;
+	font-size: 20px;
+}
+
+.show-blog{
+		background-color: white;
+	}
+
+.pagination{
+	clear: both;
+	text-align: center;
+	font-size: 17px;
+	padding-top: 13px;
+}
+
+.pagination > span:hover{
+	background-color: #337ab7;
+}
+
+.pagination > span > a:hover{
+	color: white;
+}
+
+.blog-title {
+    color: #6f6f6f;
+    margin: 15px 40px 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.blog-show-text {
+    margin: 60px;
+    font-size: 17px;
+}
+
+/*side-bar*/
+
+.side-bar{
+	width: 30%;
+	float: left;
+}
+
+.profile-box{
+	width: 95%;
+	background-color: white;
+	margin: 25px auto 0;
+}
+
+.profile-headline{
+	text-align: center;
+	padding-top: 10px;
+}
+
+.profile-line{
+	width: 75px;
+    height: 3px;
+    background-color: #ec715f;
+    margin: 0px auto 8px;
+}
+
+.profile-img-box{
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	margin: 0 auto;
+	background-image: url(img/my-icon.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.profile-name{
+	text-align: center;
+	margin-top: 10px;
+}
+
+.name-line{
+	width: 125px;
+    height: 3px;
+    background-color: #374CA5;
+    margin: 0px auto 8px;
+}
+
+.profile-detail{
+	color: #6f6f6f;
+	text-align: center;
+	margin: 25px 2% 0;
+}
+
+.profile-link-text{
+	width: 150px;
+	display: block;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+.profile-link:hover{
+	background-color: #337ab7;
+	color: white;
+}
+
+.searching-box{
+	width: 95%;
+	height: 100px;
+	margin: 30px auto 0;
+	background-color: white;
+	position: relative;
+}
+
+.searching-box-content{
+	background-color: #f5f5f5;
+	width: 95%;
+	height: 50px;
+	border-radius: 10px;
+	position: absolute;
+	top: 25px;
+	right: 2.5%;
+}
+
+.fa-search{
+	float: right;
+	font-size: 23px;
+	line-height: 50px;
+
+}
+
+.searching-text{
+	color: #6f6f6f;
+	line-height: 50px;
+	margin-left: 5px;
+	display: inline-block;
+}
+
+.popular-box{
+	margin: 30px auto 10px;
+	padding-bottom: 1px;
+}
+
+.popular-headline{
+	text-align: center;
+	padding-top: 10px;
+}
+
+.popular-line{
+	width: 100px;
+    height: 3px;
+    background-color: #ec715f;
+    margin: 0px auto 8px;
+}
+
+.popular-contents{
+	width: 90%;
+	margin: 25px auto;
+	text-align: center;
+	background-color: white;
+	padding-bottom: 20px;
+
+}
+
+.popular-img{
+	width: 100%;
+	height: 200px;
+}
+
+.popular-img:hover{
+	opacity: 0.8;
+}
+
+.popular-text{
+	color: #6f6f6f;
+	padding-top: 70px;
+}
+
+.popular-read-more{
+	margin-top: 20px;
+	display: inline-block;
+}
+
+.main-profile-img{
+	width: 250px;
+	height: 250px;
+	background-image: url(img/my-icon.jpg);
+	background-size: cover;
+	background-position: center;
+	float: left;
+	border-radius: 10px;
+	margin: 10px 20px 20px 0px;
+}
+
+.main-SNS-box{
+	width: 500px;
+	height: 250px;
+	float: left;
+	background-color: white;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.main-profile-SNS{
+	font-size: 32px;
+    padding-top: 25px;
+}
+
+.Self-introduction{
+	text-align: center;
+}
+
+.Self-introduction-line{
+	width: 220px;
+    height: 3px;
+    background-color: #ec715f;
+    margin: 0px auto 8px;
+}
+
+.main-profile-text-contents{
+	width: 84%;
+	background-color: white;
+	margin: 0 auto;
+}
+
+.main-profile-text, .myskills-text, .schedule-text{
+	color: #6f6f6f;
+	font-size: 18px;
+	text-align: center;
+	padding: 30px 20px;
+}
+
+.myskills-box, .schedule-box{
+	width: 84%;
+	background-color: white;
+	margin: 20px auto;
+	text-align: center;
+}
+
+.myskills-line{
+	width: 115px;
+    height: 3px;
+    background-color: #ec715f;
+    margin: 0px auto 8px;
+}
+
+.myskills, .schedule, .Self-introduction{
+	padding-top: 30px;
+	margin-top: 30px;
+}
+
+.schedule-line{
+	width: 120px;
+    height: 3px;
+    background-color: #ec715f;
+    margin: 0px auto 8px;
+}
+
+/*main2*/
+
+.main2{
+	width: 100%;
+	text-align: center;
+}
+
+.main2-box{
+	width: 30%;
+	margin: 0 1%;
+	float: left;
+}
+
+.main2-box:first-child{
+	margin-left: 3%;
+}
+
+.main2-box:last-child{
+	margin-right: 3%;
+}
+
+.main2-text{
+	font-size: 32px;
+	padding-top: 10px;
+}
+
+.Contact-line{
+	width: 125px;
+    height: 3px;
+    background-color: #ec715f;
+    margin: 0px auto 8px;
+}
+
+.My-product-line{
+	width: 180px;
+    height: 3px;
+    background-color: #ec715f;
+	margin: 0px auto 8px
+}
+
+.SNS-line{
+	width: 65px;
+    height: 3px;
+    background-color: #ec715f;
+    margin: 0px auto 8px;
+}
+
+.Contact-text-1{
+	font-size: 20px;
+	margin-top: 18px;
+	color: #6f6f6f;
+}
+
+.Contact-text-2{
+	font-size: 20px;
+	color: #6f6f6f;
+	margin: 5px 0 15px;
+}
+
+.My-product-text1{
+	font-size: 18px;
+	margin-top: 18px;
+	color: #6f6f6f;
+}
+
+.My-product-text2{
+	font-size: 22px;
+	margin: 13px 0 21px;
+	color: #6f6f6f;
+}
+
+.SNS-text-1{
+	font-size: 18px;
+	margin-top: 18px;
+	color: #6f6f6f;
+}
+
+.icon-main2-SNS{
+	display: inline-block;
+	font-size: 48px;
+	margin: 25px 12px 15px;
+}
+
+.icon-main2-SNS:hover{
+	opacity: 0.8;
+}
+
+.product-link:hover, .contact-link:hover{
+	background-color: #337ab7;
+	color: white;
+}
+
+/*footer*/
+
+footer{
+	background-color: black;
+	width: 100%;
+	height: 70px;
+}
+
+.footer-text, .footer-link{
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	line-height: 70px;
+}
+
+/*新規投稿*/
+
+.form-box{
+	text-align: center;
+	background-color: #f7f7f7;
+}
+
+.form-box-h3{
+	margin: 15px 0 5px;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 5%;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  padding: 4px 9px;
+  background: #007fff;
+  color: #ffffff;
+  line-height: 1em;
+  transition: .3s;
+  border: 2px solid #007fff;
+}
+
+.button:hover {
+  color: #007fff;
+  background: #ffffff;
+}
+
+.back-link{
+	margin: 10px 0 10px;
+    display: inline-block;
+    font-size: 17px;
+}
+
+/*media-queries*/
+
+@media screen and (max-width: 425px){
+	/*header*/
+	.header-top, .normal-nav{
+		display: none;
+	}
+
+	.respond-nav{
+		display: block;
+	}
+
+	.response-header{
+		display: block;
+		width: 100%;
+		height: 60px;
+		background-color: black;
+	}
+
+	.icon-top{
+		margin: 0 6px 0 7px;
+		font-size: 15px;
+	}
+
+	.nav-list-item{
+		margin: 0 2px;
+	}
+
+	.icon-nav{
+		font-size: 14px;
+	}
+
+	.blog-name{
+    color: white;
+    padding-top: 20px;
+    font-size: 30px;
+    text-align: center;
+	}
+
+	.menu-box{
+  	width: 40px;
+  	height: 40px;
+  	border: 1px solid white;
+  	float: right;
+  	margin: 10px 10px 0 0;
+	}
+
+	.list-bar{
+  	display: block;
+  	width: 25px;
+  	height: 2px;
+  	margin: 8px auto;
+  	background-color: white;
+	}
+
+	.main-visual-text{
+		font-size: 30px;
+		padding-top: 80px;
+	}
+
+	.main-visual-text-2{
+		font-size: 17px;
+	}
+
+	.main-media{
+		padding-top: 1px;
+	}
+
+	.Blog{
+		float: none;
+		width: 100%;
+		background-color: #f6f6f6;
+	}
+
+	.blog-box{
+		width: 93%;
+		height: auto;
+	}
+
+	.blog-box:nth-child(odd){
+		margin: 15px;
+	}
+
+	.blog-headline{
+		padding-top: 10px;
+	}
+
+	.blog-read-more{
+		padding-bottom: 20px;
+	}
+
+	.blog-show-img {
+    height: 300px;
+	}
+
+	.show-blog{
+		background-color: white;
+	}
+
+
+	.blog-title{
+		margin: unset;
+		padding-top: 20px;
+	}
+
+	.main-profile-img{
+		float: none;
+		margin: 30px auto;
+	}
+
+	.blog-contents{
+		width: 100%;
+	}
+
+	.main-SNS-box{
+		width: 100%;
+	}
+
+	.blog-prev{
+		margin-left: 15px;
+	}
+
+	.blog-next{
+		margin-right: 0px;
+	}
+
+	.side-bar{
+		width: 100%;
+	}
+
+	.main2-box:first-child{
+		margin-left: 0;
+	}
+
+	.main2-box{
+		margin: 0 0 50px 0;
+		width: 100%;
+		float: none;
+	}
+
+	.footer-text{
+		font-size: 12px;
+		line-height: 24px;
+	}
+}
