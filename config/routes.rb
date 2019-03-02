@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, path: '', path_names: { sign_up: "dont_use"}
 
   resources :blogs
   resources :categories, only: [:show]
