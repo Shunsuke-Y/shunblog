@@ -2,7 +2,11 @@ class BlogsController < ApplicationController
 	impressionist :actions=> [:show]
 
   def new
+    if user_signed_in?
   	@blog = Blog.new
+  else
+    redirect_to blogs_path
+  end
   end
 
   def create
@@ -21,7 +25,11 @@ class BlogsController < ApplicationController
   end
 
   def edit
+    if user_signed_in?
   	@blog = Blog.find(params[:id])
+  else
+    redirect_to blogs_path
+  end
   end
 
   def update
@@ -34,9 +42,13 @@ class BlogsController < ApplicationController
   end
 
   def destroy
+    if user_signed_in?
   	blog = Blog.find(params[:id])
   	blog.destroy
   	redirect_to blogs_path
+  else
+    redirect_to blogs_path
+  end
   end
 
   def index
