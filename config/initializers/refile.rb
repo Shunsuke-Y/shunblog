@@ -1,10 +1,10 @@
 require "refile/s3"
 
 aws = {
-  access_key_id: "AKIAI37TT4PZGZ65SEPQ",
-  secret_access_key: "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",
+  access_key_id: "AKIAJDQNJ2SRU6LIXDMA",
+  secret_access_key: "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",
   region: "ap-northeast-1",
-  bucket: "rails-shunblog",
+  bucket: "shunblog",
 }
 Refile.cache = Refile::S3.new(prefix: "cache", **aws)
 Refile.store = Refile::S3.new(prefix: "store", **aws)
