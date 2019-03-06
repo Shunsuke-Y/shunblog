@@ -82,6 +82,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'jquery-rails'
 
+gem "refile-s3"
+
 group :production do
   gem 'pg'
 end
