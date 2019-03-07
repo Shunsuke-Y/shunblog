@@ -84,7 +84,7 @@ gem 'jquery-rails'
 
 gem "refile-s3"
 
-
+gem 'dotenv-rails'
 
 group :production do
   gem 'pg'

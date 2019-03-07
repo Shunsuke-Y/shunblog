@@ -31,3 +31,5 @@
 /config/master.key
 
 /config/initializers/refile.rb
+
+/.env
